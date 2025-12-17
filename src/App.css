@@ -1,0 +1,139 @@
+body {
+  background: #0f172a; /* dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.board {
+  padding: 20px;
+  background: #020617;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.row {
+  display: flex;
+}
+
+.block {
+  width: 110px;
+  height: 110px;
+  border: 2px solid #1e3a8a;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+
+  background: linear-gradient(145deg, #1e40af, #1e3a8a);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* hover effect */
+.block:hover {
+  background: linear-gradient(145deg, #2563eb, #1e40af);
+  transform: scale(1.05);
+}
+
+/* when clicked (X or O appears) */
+.block.filled {
+  cursor: not-allowed;
+  animation: pop 0.3s ease;
+}
+
+/* X style */
+.block.x {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56,189,248,0.8);
+}
+
+/* O style */
+.block.o {
+  color: #f8fafc;
+  text-shadow: 0 0 10px rgba(248,250,252,0.8);
+}
+
+/* animation */
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.app-container {
+  height: 100vh;
+  background: #020617;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* full screen overlay */
+.winner-screen {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #1e3a8a, #020617);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.winner-text {
+  font-size: 64px;
+  color: white;
+  margin-bottom: 30px;
+  animation: popGlow 0.6s ease;
+  text-shadow: 0 0 25px rgba(56,189,248,0.9);
+}
+
+.restart-btn {
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(145deg, #2563eb, #1e40af);
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.restart-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(37,99,235,0.9);
+}
+
+/* animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popGlow {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
