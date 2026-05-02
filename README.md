@@ -1,6 +1,7 @@
 # TicTacToe Game Using React.JS
 Created A simple TicTacToe game using react .js this helped me to know about react js fundamentals like components , useState, props etc
 I have made use of Typesript in this project 
+Its part of My learning process and as a begginer i think it will be usefull to u also
 I have uploaded the zip file of the project u can download it and use it Thank You Pls do follow if u love my work !
 <br>
 <img width="1518" height="776" alt="Screenshot 2025-12-17 200528" src="https://github.com/user-attachments/assets/80efafd4-08ec-4653-b43b-801f70d30d07" />
